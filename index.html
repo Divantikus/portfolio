@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1500" />
+    <link rel="shortcut icon" href="/img/otherr/portf.svg" type="image/png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Портфолио</title>
+  </head>
+  <body>
+    <div class="content">
+      <header class="header">
+        <nav class="header__nav-bar">
+          <ul class="header__list-of-elements">
+            <li class="header__item">
+              <button
+                class="header__button orange-underline-on"
+                id="page_home"
+                tabindex="1"
+              >
+                home
+              </button>
+            </li>
+            <li class="header__item">
+              <button class="header__button" id="page_about" tabindex="2">
+                about me
+              </button>
+            </li>
+            <li class="header__item">
+              <button class="header__button" id="pade_hobbies" tabindex="3">
+                Hobbies
+              </button>
+            </li>
+            <li class="header__item">
+              <button class="header__button" id="page_contacts" tabindex="4">
+                contacts
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="main__home-page home-page">
+          <h1 class="home-page__title">Привет!</h1>
+          <h2 class="home-page__sub-title accent-text">
+            Я Иван, а это моё портфолио.
+          </h2>
+          <img class="home-page__gif" src="/img/home-page/опа.gif" alt="" />
+        </section>
+
+        <section class="main__about-page about-page hide">
+          <div class="about-page__text-container">
+            <h2 class="about-page__title">Обо мне</h2>
+            <p class="about-page__text">
+              Самый обычный студент, который живёт размеренной жизнь и стремится
+              к своей мечте.
+            </p>
+            <p class="about-page__text">
+              Вы можете узнать о моих хобби, перейдя по ссылочке ниже.
+            </p>
+            <button class="about-page__button" id="reed_more" tabindex="5">
+              Узнать больше
+              <img
+                class="about-page__arrow"
+                src="/img/about-page/Right.svg"
+                alt="arrow"
+              />
+            </button>
+          </div>
+          <div class="about-page__img-container">
+            <img
+              src="/img/about-page/photo-fone.jpg"
+              alt="фото-1"
+              class="about-page__img"
+            />
+            <img
+              src="/img/about-page/photo-1.jpg"
+              alt="фото-2"
+              class="about-page__img"
+            />
+            <img
+              src="/img/about-page/photo-2.jpg"
+              alt="фото-3"
+              class="about-page__img"
+            />
+            <img
+              src="/img/about-page/зрщещ-3.jpg"
+              alt="фото-4"
+              class="about-page__img"
+            />
+          </div>
+        </section>
+
+        <section class="main__hobbies-page hobbies-page hide">
+          <div class="hobbies-page__container container">
+            <h2 class="hobbies-page__title">Хобби</h2>
+            <div class="hobbies-page__flex-container">
+              <div class="hobbies-page__column">
+                <div class="hobbies-page__card">
+                  <div class="hobbies-page__img-container">
+                    <img
+                      src="/img/hobbies/bike.jpg"
+                      alt="Велосипед"
+                      class="hobbies-page__img"
+                    />
+                  </div>
+                  <h3 class="hobbies-page__sub-title">
+                    Покатушки на велосипеде
+                  </h3>
+                  <p class="hobbies-page__text">
+                    Лучший способ активно отдохнуть летним вечером -
+                    <span class="accent-text">прокатиться на велосипеде.</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="hobbies-page__column">
+                <div class="hobbies-page__card">
+                  <div class="hobbies-page__img-container">
+                    <img
+                      src="/img/hobbies/wb.jpg"
+                      alt="Мяч"
+                      class="hobbies-page__img"
+                    />
+                  </div>
+                  <h3 class="hobbies-page__sub-title">Волейбол</h3>
+                  <p class="hobbies-page__text">
+                    Что может быть лучше чашки кофе с утра? Правильно, волейбол.
+                  </p>
+                </div>
+              </div>
+
+              <div class="hobbies-page__column">
+                <div class="hobbies-page__card">
+                  <div class="hobbies-page__img-container">
+                    <img
+                      src="/img/hobbies/sky.jpeg"
+                      alt="Небо"
+                      class="hobbies-page__img"
+                    />
+                  </div>
+                  <h3 class="hobbies-page__sub-title">Сон</h3>
+                  <p class="hobbies-page__text">
+                    Здоровый сон - залог продуктивного дня. Любимейшее занятие
+                    ночью.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="main__contacts contacts-page hide">
+          <div class="contacts-page__container container">
+            <h2 class="contacts-page__title">Контакты</h2>
+            <div class="contacts-page__flex-container">
+              <div class="contacts-page__card">
+                <img
+                  src="/img/contacts/tg.svg"
+                  alt="Телеграмм"
+                  class="contacts-page__img"
+                />
+                <h3 class="contacts-page__sub-title">Телеграмм</h3>
+                <a
+                  href="https://t.me/iv_testt"
+                  class="contacts-page__link"
+                  target="_blank"
+                  >@iv_testt</a
+                >
+              </div>
+              <div class="contacts-page__card">
+                <img
+                  src="/img/contacts/mail.svg"
+                  alt="Почта"
+                  class="contacts-page__img"
+                />
+                <h3 class="contacts-page__sub-title">Почта</h3>
+                <a
+                  href="mailto:ivanchengar@gmail.com"
+                  class="contacts-page__link"
+                  target="_blank"
+                  >ivanchengar@gmail.com</a
+                >
+              </div>
+              <div class="contacts-page__card">
+                <img
+                  src="/img/contacts/telef.svg"
+                  alt="Телефон"
+                  class="contacts-page__img"
+                />
+                <h3 class="contacts-page__sub-title">Телефон</h3>
+                <a href="tel:+79497183040" class="contacts-page__link"
+                  >+79497183040</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

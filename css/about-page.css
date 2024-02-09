@@ -1,0 +1,111 @@
+@keyframes hide-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    /* display: block; */
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(200px);
+    display: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+    /* display: block; */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+  }
+}
+
+.hide-section_about {
+  animation: hide-animation 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.show-section_about {
+  animation: show 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.about-page__text-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 321px;
+  margin: 150px 50px 0 100px;
+}
+.about-page__title {
+  font-size: 68px;
+  font-weight: 700;
+  margin: 0 0 21px 0;
+}
+.about-page__text {
+  font-size: 18px;
+  margin: 0 0 38px 0;
+}
+.about-page__button {
+  padding: 20px 20px 20px 30px;
+  background: #00c9e0;
+  border-radius: 182px;
+  color: var(--main-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  width: 282px;
+  transition: 0.2s;
+}
+.about-page__button:hover {
+  transition: 0.2s;
+  background: #02f6c5;
+}
+.about-page__button:focus {
+  transition: 0.2s;
+  background: #02f6c5;
+}
+.about-page__arrow {
+  transition: 0.2s;
+  padding: 2px 0 0 0;
+}
+.about-page__button:hover .about-page__arrow {
+  transition: 0.2s;
+  padding: 2px 0 0 30px;
+}
+
+.about-page__img-container {
+  vertical-align: top;
+  display: inline-flex;
+  /* display: inline-block; */
+  flex-wrap: wrap;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 700px;
+  /* float: left; */
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.about-page__img {
+  width: 350px;
+  height: 290px;
+}
+
+.about-page__img-container .about-page__img:nth-child(3) {
+  width: 350px;
+  height: 350px;
+  transform: rotate(90deg);
+  /* transform-origin: 100% 0; */
+}
+.about-page__img-container .about-page__img:last-child {
+  width: 350px;
+  height: 350px;
+}

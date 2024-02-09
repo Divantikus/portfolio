@@ -1,0 +1,42 @@
+.header {
+  border-bottom: 1px solid var(--main-color);
+}
+.header__nav-bar {
+  padding: 10px 10px 0 10px;
+}
+.header__list-of-elements {
+  display: flex;
+  justify-content: space-between;
+}
+.header__item {
+  border: 3px solid transparent;
+}
+.header__button {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-text-color);
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  transition: 0.2s;
+  margin: 0 0 5px 0;
+}
+.header__list-of-elements .header__item:last-child .header__button {
+  color: #00ff7f;
+}
+.header__button:hover {
+  transition: 0.2s;
+  color: orange;
+}
+.header__button:focus {
+  transition: 0.2s;
+  color: orange;
+}
+.header__list-of-elements .header__item:last-child .header__button:hover {
+  color: #068747;
+}
+.header__list-of-elements .header__item:last-child .header__button:focus {
+  color: #068747;
+}

@@ -14,7 +14,7 @@
   0% {
     opacity: 0;
     transform: translateY(200px);
-    /* display: block; */
+    display: block;
   }
   100% {
     display: block;
@@ -33,7 +33,6 @@
 }
 
 .home-page {
-  /* opacity: 0; */
   padding: 50px 0 0 0;
   color: var(--main-text-color);
 }

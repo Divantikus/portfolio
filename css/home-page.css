@@ -7,17 +7,17 @@
   100% {
     opacity: 0;
     transform: translateY(100px);
-    display: none;
+    /* display: none; */
   }
 }
 @keyframes show {
   0% {
     opacity: 0;
     transform: translateY(200px);
-    display: block;
+    /* display: block; */
   }
   100% {
-    display: block;
+    /* display: block; */
     opacity: 1;
     transform: translateY(0);
   }

@@ -20,12 +20,14 @@ let lastPage = homePage,
   aboutFlaf = false,
   hobbiesFlag = false,
   contactsFlag = false;
+// homeSection.setAttribute("display", "none");
 
 function homeShow() {
   homeButton.classList.remove("orange-underline-off");
   homeButton.classList.add("orange-underline-on");
   homeSection.classList.remove("hidden-section_home");
   homeSection.classList.add("show-section_home");
+  homeSection.removeAttribute("display");
   if (bodySection.matches("[class$=dark-theme-on]")) {
     bodySection.classList.remove("dark-theme-on");
     bodySection.classList.add("dark-theme-off");
@@ -36,6 +38,7 @@ function homeHidden() {
   homeButton.classList.add("orange-underline-off");
   homeSection.classList.remove("show-section_home");
   homeSection.classList.add("hidden-section_home");
+  homeSection.setAttribute("display", "none");
 }
 
 function aboutShow() {
@@ -44,6 +47,7 @@ function aboutShow() {
   aboutSection.classList.remove("hide");
   aboutSection.classList.remove("hide-section_about");
   aboutSection.classList.add("show-section_about");
+  aboutSection.removeAttribute("display");
   if (bodySection.matches("[class$=dark-theme-on]")) {
     bodySection.classList.remove("dark-theme-on");
     bodySection.classList.add("dark-theme-off");
@@ -54,6 +58,7 @@ function aboutHidden() {
   aboutButton.classList.add("orange-underline-off");
   aboutSection.classList.remove("show-section_about");
   aboutSection.classList.add("hide-section_about");
+  aboutSection.setAttribute("display", "none");
 }
 
 function hobbiesShow() {
@@ -62,6 +67,7 @@ function hobbiesShow() {
   hobbiesSection.classList.remove("hide-section_hobbies");
   hobbiesSection.classList.add("show-section_hobbies");
   hobbiesSection.classList.remove("hide");
+  hobbiesSection.removeAttribute("display");
   if (bodySection.matches("[class$=dark-theme-on]")) {
     bodySection.classList.remove("dark-theme-on");
     bodySection.classList.add("dark-theme-off");
@@ -73,10 +79,12 @@ function hobbiesHidden() {
   hobbyButton.classList.add("orange-underline-off");
   hobbiesSection.classList.remove("show-section_hobbies");
   hobbiesSection.classList.add("hide-section_hobbies");
+  hobbiesSection.setAttribute("display", "none");
 }
 
 function contactsShow() {
   contactsSection.classList.remove("hide");
+  contactsSection.removeAttribute("display");
   contactsButton.classList.remove("green-underline-off");
   contactsButton.classList.add("green-underline-on");
   contactsSection.classList.remove("hide-section_contacts");
@@ -88,6 +96,7 @@ function contactsHidden() {
   contactsButton.classList.add("green-underline-off");
   contactsSection.classList.remove("show-section_contacts");
   contactsSection.classList.add("hide-section_contacts");
+  contactsSection.setAttribute("display", "none");
 }
 
 document.getElementById("page_home").onclick = function () {

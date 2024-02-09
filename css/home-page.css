@@ -33,6 +33,7 @@
 }
 
 .home-page {
+  /* display: none; */
   padding: 50px 0 0 0;
   color: var(--main-text-color);
 }

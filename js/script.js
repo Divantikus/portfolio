@@ -4,23 +4,26 @@ const bodySection = document.querySelector(".content");
 const homeSection = document.querySelector(".home-page");
 const aboutSection = document.querySelector(".about-page");
 const hobbiesSection = document.querySelector(".hobbies-page");
+const skilsSection = document.querySelector(".skils-page");
 const contactsSection = document.querySelector(".contacts-page");
 // Кнопки
 const homeButton = document.getElementById("page_home");
 const aboutButton = document.getElementById("page_about");
 const hobbyButton = document.getElementById("pade_hobbies");
+const skilsButton = document.getElementById("page_skils");
 const contactsButton = document.getElementById("page_contacts");
 // Переменные
 const homePage = homeHidden;
 const aboutPage = aboutHidden;
 const hobbiesPage = hobbiesHidden;
+const skilsPage = skilsHidden;
 const contactsPage = contactsHidden;
 let lastPage = homePage,
   homeFlag = true,
   aboutFlaf = false,
   hobbiesFlag = false,
+  skilsFlag = false,
   contactsFlag = false;
-// homeSection.setAttribute("display", "none");
 
 function hidingFunction(tr) {
   tr.classList.add("hide");
@@ -32,8 +35,6 @@ function homeShow() {
   homeButton.classList.add("orange-underline-on");
   homeSection.classList.remove("hidden-section_home");
   homeSection.classList.add("show-section_home");
-  // homeSection.setAttribute("display", "block");
-  // homeSection.removeAttribute("display");
   if (bodySection.matches("[class$=dark-theme-on]")) {
     bodySection.classList.remove("dark-theme-on");
     bodySection.classList.add("dark-theme-off");
@@ -45,9 +46,6 @@ function homeHidden() {
   homeSection.classList.remove("show-section_home");
   homeSection.classList.add("hidden-section_home");
   setTimeout(hidingFunction, 205, homeSection);
-  // homeSection.classList.add("hide");
-  // homeSection.setAttribute("display", "none");
-  // homeSection.remove();
 }
 
 function aboutShow() {
@@ -56,7 +54,6 @@ function aboutShow() {
   aboutSection.classList.remove("hide");
   aboutSection.classList.remove("hide-section_about");
   aboutSection.classList.add("show-section_about");
-  // aboutSection.removeAttribute("display");
   if (bodySection.matches("[class$=dark-theme-on]")) {
     bodySection.classList.remove("dark-theme-on");
     bodySection.classList.add("dark-theme-off");
@@ -68,9 +65,6 @@ function aboutHidden() {
   aboutSection.classList.remove("show-section_about");
   aboutSection.classList.add("hide-section_about");
   setTimeout(hidingFunction, 205, aboutSection);
-
-  // aboutSection.classList.add("hide");
-  // aboutSection.setAttribute("display", "none");
 }
 
 function hobbiesShow() {
@@ -79,7 +73,6 @@ function hobbiesShow() {
   hobbiesSection.classList.remove("hide-section_hobbies");
   hobbiesSection.classList.add("show-section_hobbies");
   hobbiesSection.classList.remove("hide");
-  // hobbiesSection.removeAttribute("display");
   if (bodySection.matches("[class$=dark-theme-on]")) {
     bodySection.classList.remove("dark-theme-on");
     bodySection.classList.add("dark-theme-off");
@@ -91,8 +84,23 @@ function hobbiesHidden() {
   hobbyButton.classList.add("orange-underline-off");
   hobbiesSection.classList.remove("show-section_hobbies");
   hobbiesSection.classList.add("hide-section_hobbies");
-  // hobbiesSection.setAttribute("display", "none");
   setTimeout(hidingFunction, 205, hobbiesSection);
+}
+
+function skilsShow() {
+  skilsButton.classList.remove("orange-underline-off");
+  skilsButton.classList.add("orange-underline-on");
+  skilsSection.classList.remove("hide-section_skils");
+  skilsSection.classList.add("show-section_skils");
+  skilsSection.classList.remove("hide");
+}
+
+function skilsHidden() {
+  skilsButton.classList.remove("orange-underline-on");
+  skilsButton.classList.add("orange-underline-off");
+  skilsSection.classList.remove("show-section_skils");
+  skilsSection.classList.add("hide-section_skils");
+  setTimeout(hidingFunction, 205, skilsSection);
 }
 
 function contactsShow() {
@@ -109,7 +117,6 @@ function contactsHidden() {
   contactsButton.classList.add("green-underline-off");
   contactsSection.classList.remove("show-section_contacts");
   contactsSection.classList.add("hide-section_contacts");
-  // contactsSection.setAttribute("display", "none");
   setTimeout(hidingFunction, 205, contactsSection);
 }
 
@@ -120,7 +127,7 @@ document.getElementById("page_home").onclick = function () {
     setTimeout(homeShow, 205);
     homeFlag = true;
   }
-  aboutFlaf = hobbiesFlag = contactsFlag = false;
+  aboutFlaf = skilsFlag = hobbiesFlag = contactsFlag = false;
 };
 
 document.getElementById("page_about").onclick = function () {
@@ -130,24 +137,35 @@ document.getElementById("page_about").onclick = function () {
     setTimeout(aboutShow, 205);
     aboutFlaf = true;
   }
-  homeFlag = hobbiesFlag = contactsFlag = false;
+  homeFlag = skilsFlag = hobbiesFlag = contactsFlag = false;
 };
 document.getElementById("pade_hobbies").onclick = function () {
   if (!hobbiesFlag) {
     lastPage.call();
     lastPage = hobbiesHidden;
     setTimeout(hobbiesShow, 230);
-    // lastPage =
     hobbiesFlag = true;
   }
-  homeFlag = aboutFlaf = contactsFlag = false;
+  homeFlag = skilsFlag = aboutFlaf = contactsFlag = false;
 };
 document.getElementById("reed_more").onclick = function () {
   lastPage.call();
   lastPage = hobbiesPage;
   setTimeout(hobbiesShow, 230);
   hobbiesFlag = true;
-  homeFlag = aboutFlaf = contactsFlag = false;
+  homeFlag = skilsFlag = aboutFlaf = contactsFlag = false;
+};
+
+document.getElementById("page_skils").onclick = function () {
+  if (!skilsFlag) {
+    bodySection.classList.remove("dark-theme-off");
+    bodySection.classList.add("dark-theme-on");
+    lastPage.call();
+    lastPage = skilsPage;
+    setTimeout(skilsShow, 230);
+    skilsFlag = true;
+  }
+  homeFlag = hobbiesFlag = aboutFlaf = contactsFlag = false;
 };
 
 document.getElementById("page_contacts").onclick = function () {
@@ -159,5 +177,5 @@ document.getElementById("page_contacts").onclick = function () {
     setTimeout(contactsShow, 530);
     contactsFlag = true;
   }
-  homeFlag = aboutFlaf = hobbiesFlag = false;
+  homeFlag = skilsFlag = aboutFlaf = hobbiesFlag = false;
 };

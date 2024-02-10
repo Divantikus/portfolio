@@ -1,0 +1,147 @@
+@keyframes hide-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-circle {
+  0% {
+    background: conic-gradient(
+      orange 0% 35%,
+      transparent 35% 70%,
+      transparent 70% 80%,
+      transparent 80% 90%,
+      transparent 90% 100%
+    );
+  }
+  20% {
+    background: conic-gradient(
+      orange 0% 35%,
+      #1e90ff 35% 70%,
+      transparent 70% 80%,
+      transparent 80% 90%,
+      transparent 90% 100%
+    );
+  }
+  40% {
+    background: conic-gradient(
+      orange 0% 35%,
+      #1e90ff 35% 70%,
+      yellow 70% 80%,
+      transparent 80% 90%,
+      transparent 90% 100%
+    );
+  }
+  60% {
+    background: conic-gradient(
+      orange 0% 35%,
+      #1e90ff 35% 70%,
+      yellow 70% 80%,
+      #19ff19 80% 90%,
+      transparent 90% 100%
+    );
+  }
+  100% {
+    background: conic-gradient(
+      orange 0% 35%,
+      #1e90ff 35% 70%,
+      yellow 70% 80%,
+      #19ff19 80% 90%,
+      #8b00ff 90% 99.9%,
+      orange 99.9% 100%
+    );
+  }
+}
+
+.circle-anim {
+  animation: show-circle 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+
+.hide-section_skils {
+  animation: hide-animation 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.show-section_skils {
+  animation: show 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.skils-page__title {
+  text-align: center;
+  font-size: 105px;
+  margin: 50px 0 30px 0;
+}
+.skils-page__statistics {
+  width: 611px;
+  padding: 40px 0 0 0;
+  display: inline-block;
+  margin: 0 0 0 40px;
+}
+.skils-page__sub-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #fff;
+  margin: 0 0 16px 0;
+}
+
+.skils-page__point {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.skils-page__point::before {
+  content: "";
+  position: relative;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin: 0 8px 0 0;
+  display: inline-block;
+}
+
+.skils-page__point_orange::before {
+  background: orange;
+}
+.skils-page__point_blue::before {
+  background: #1e90ff;
+}
+.skils-page__point_yellow:before {
+  background: yellow;
+}
+.skils-page__point_green::before {
+  background: #19ff19;
+}
+
+.skils-page__point_purple::before {
+  background: #8b00ff;
+}
+
+.skils-page__chart {
+  vertical-align: top;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 0 0 100px;
+}
